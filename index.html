@@ -77,7 +77,7 @@ document.getElementById('form').addEventListener('submit',function(e){
   fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(this)})
     .then(r=>r.json())
     .then(j=>{
-      if(j.success){this.style.display='none';document.getElementById('thanks').style.display='block';location.hash='reservation';}
+      if(j.success){window.location.href='/reservation/';}
       else{btn.disabled=false;btn.textContent='送信する ›';alert('送信に失敗しました。お電話（082-222-6671）にてご連絡ください。');}
     })
     .catch(()=>{btn.disabled=false;btn.textContent='送信する ›';alert('通信エラーが発生しました。お電話（082-222-6671）にてご連絡ください。');});
