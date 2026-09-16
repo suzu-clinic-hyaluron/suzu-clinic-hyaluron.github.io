@@ -14,6 +14,25 @@
   <style>
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf4f7;color:#16354e;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}.page{width:min(100%,930px);margin:auto;background:#fff;box-shadow:0 0 40px #173b541a}img{display:block;width:100%;height:auto}.cta-img{position:relative}.cta-img a{position:absolute;inset:78% 5% 5%;border-radius:999px}.faq{padding:8% 4%;background:#f3f9fc}.faq-title{margin:0 0 6%;text-align:center;color:#0c355b;font:500 clamp(30px,7vw,60px)/1.5 "Yu Mincho",serif;letter-spacing:.08em}.faq-item{margin:0 0 20px;border:1px solid #d3e3ed;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 8px 20px #1d557014}.faq-q{width:100%;min-height:110px;padding:20px 25px;display:grid;grid-template-columns:72px 1fr 40px;align-items:center;gap:15px;border:0;background:#fff;color:#0c355b;text-align:left;cursor:pointer}.faq-q strong{color:#bb7d05;font:52px Georgia,serif}.faq-q span{font:500 23px/1.6 "Yu Mincho",serif}.faq-q b{font-size:38px;font-weight:300;color:#0863ae}.faq-a{display:none;padding:22px 25px 28px 110px;border-top:1px solid #d3e3ed;font-size:17px;line-height:1.9}.faq-item.open .faq-a{display:block}.faq-item.open .faq-q b{transform:rotate(45deg)}.clinic{position:relative}.clinic-address{position:absolute;top:21.5%;left:24%;width:67%;min-height:12%;padding:0 1%;display:flex;flex-direction:column;justify-content:center;gap:.35em;background:#fff;color:#435b6c;font-size:clamp(11px,3vw,27px);line-height:1.65}.clinic-address strong{color:#07559e;font-size:.95em}.clinic iframe{position:absolute;left:5%;top:58.5%;width:90%;height:39%;border:1px solid #c8dce8;border-radius:14px;background:#edf5f8}.reservation{padding:9% 5% 12%;background:linear-gradient(#eef7fc,#fff)}.reservation header{text-align:center;margin-bottom:40px}.reservation header p{margin:0 0 8px;color:#b98519;font:20px Georgia,serif;letter-spacing:.18em}.reservation h1{margin:0;font:500 clamp(28px,5vw,45px)/1.5 "Yu Mincho",serif}.reservation header span,.reservation header small{display:block;margin-top:15px;line-height:1.8}.reservation header small{color:#6c7e8b}.reservation form{padding:5%;border:1px solid #c8dce8;border-radius:20px;background:#fff;box-shadow:0 14px 35px #26536e16}.field{margin-bottom:26px}.field label{display:block;margin-bottom:10px;font-weight:700}.req{margin-left:8px;padding:4px 7px;border-radius:4px;background:#b98519;color:#fff;font-size:11px}input,select,textarea{width:100%;padding:14px;border:1px solid #bed6e5;border-radius:8px;background:#fbfdfe;font-size:16px}.dates{display:grid;grid-template-columns:1fr 1fr;gap:10px}.note{color:#6c7e8b;font-size:13px;line-height:1.8}.privacy{display:flex!important;align-items:center;gap:10px}.privacy input{width:auto}.submit{width:100%;min-height:62px;border:0;border-radius:999px;background:#0c355b;color:#fff;font-size:19px;cursor:pointer}.submit:disabled{opacity:.6;cursor:not-allowed}.thanks{display:none;padding:80px 20px;text-align:center}.thanks h2{font:500 34px "Yu Mincho",serif}.fixed{position:fixed;z-index:10;left:50%;bottom:0;width:min(100%,930px);padding:9px 5% calc(9px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#ffffffed}.fixed a{min-height:60px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:linear-gradient(110deg,#092d51,#164a76);color:#fff;text-decoration:none;font:500 18px "Yu Mincho",serif}.footer{padding:45px 20px 105px;text-align:center;background:#0c355b;color:#fff}@media(max-width:600px){.faq-q{min-height:90px;padding:12px;grid-template-columns:42px 1fr 32px;gap:8px}.faq-q strong{font-size:36px}.faq-q span{font-size:16px}.faq-a{padding:18px 18px 22px;font-size:15px}.reservation form{padding:22px 16px}.dates{grid-template-columns:1fr}.fixed a{font-size:15px}}
     .clinic-address{display:none}.clinic iframe{top:64.5%;height:33%}.clinic-map-link{position:absolute;z-index:2;left:calc(5% + 12px);top:calc(64.5% + 12px);padding:10px 15px;border-radius:6px;background:#fff;color:#17436d;box-shadow:0 1px 5px #0005;font-size:14px;font-weight:700;line-height:1;text-decoration:none}
+    .booking-date-input{cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,#0c355b 50%),linear-gradient(135deg,#0c355b 50%,transparent 50%);background-position:calc(100% - 17px) 22px,calc(100% - 12px) 22px;background-repeat:no-repeat;background-size:5px 5px,5px 5px}
+    .calendar-open{overflow:hidden}
+    .calendar-overlay{position:fixed;z-index:300;inset:0;display:grid;place-items:center;padding:18px;background:rgba(0,45,80,.46)}
+    .calendar-overlay[hidden]{display:none}
+    .calendar-dialog{width:min(100%,400px);padding:22px 18px 18px;border:1px solid #bed6e5;border-radius:22px;background:#fff;box-shadow:0 20px 55px rgba(0,42,80,.28);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif}
+    .calendar-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px}
+    .calendar-title{margin:0;color:#0c355b;font-size:19px;font-weight:600;text-align:center}
+    .calendar-nav{width:42px;height:42px;border:1px solid #bed6e5;border-radius:50%;background:#f5fafd;color:#0c355b;cursor:pointer;font-size:28px;line-height:1}
+    .calendar-nav:disabled{cursor:not-allowed;opacity:.3}
+    .calendar-weekdays,.calendar-days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+    .calendar-weekdays{margin:18px 0 7px;color:#6c7e8b;font-size:12px;text-align:center}
+    .calendar-days{min-height:252px}
+    .calendar-blank,.calendar-day{aspect-ratio:1}
+    .calendar-day{display:grid;place-items:center;border:0;border-radius:50%;background:#edf4f7;color:#16354e;cursor:pointer;font-size:14px}
+    .calendar-day:hover:not(:disabled){background:#d3e6f0}
+    .calendar-day.is-selected{background:#0c355b;color:#fff}
+    .calendar-day:disabled{background:#f1f2f2;color:#b8bfbd;cursor:not-allowed;text-decoration:line-through}
+    .calendar-note{margin:14px 0 0;color:#6c7e8b;font-size:11px;text-align:center}
+    .calendar-close{display:block;width:100%;min-height:44px;margin-top:15px;border:0;border-radius:999px;background:#0c355b;color:#fff;cursor:pointer;font-size:14px}
   </style>
 </head>
 <body>
@@ -66,21 +85,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 const faqs=[['痛みはありますか？','注入時にチクッとした痛みを感じる場合があります。痛みが心配な方は、カウンセリング時にご相談ください。'],['ダウンタイムはどのくらいですか？','赤み、腫れ、内出血、むくみなどが生じる場合があります。多くは一時的ですが、程度や期間には個人差があります。'],['どのような支払い方法がありますか？','現金・クレジットカードなどをご利用いただけます。ご利用可能なブランドや分割払いについては、ご予約時にお問い合わせください。'],['カウンセリング当日に施術できますか？','予約状況と診察結果により可能な場合があります。当日の施術をご希望の方は、ご予約時にお知らせください。']];
 document.getElementById('faq-list').innerHTML=faqs.map((x,i)=>`<article class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><strong>Q</strong><span>${x[0]}</span><b>＋</b></button><div class="faq-a">${x[1]}</div></article>`).join('');
-document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>{const p=b.parentElement;p.classList.toggle('open');b.setAttribute('aria-expanded',p.classList.contains('open'))});
-const times=['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00'];
-const min=new Date();min.setDate(min.getDate()+3);const minS=min.toISOString().slice(0,10);
-document.getElementById('date-fields').innerHTML=[1,2,3].map(i=>`<div class="field"><label>予約第${i}希望日・時間 ${i===1?'<span class="req">必須</span>':''}</label><div class="dates"><input type="date" name="date_${i}" min="${minS}" ${i===1?'required':''}><select name="time_${i}" ${i===1?'required':''}><option value="">時間</option>${times.map(t=>`<option>${t}</option>`).join('')}</select></div>${i===1?'<small class="note">最短予約可能日は3日後です。日曜・月曜・祝日は選択できません。</small>':''}</div>`).join('');
-document.getElementById('form').addEventListener('submit',function(e){
-  e.preventDefault();
-  const btn=this.querySelector('button[type="submit"]');
-  btn.disabled=true;btn.textContent='送信中...';
-  fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(this)})
-    .then(r=>r.json())
-    .then(j=>{
-      if(j.success){window.location.href='/reservation/';}
-      else{btn.disabled=false;btn.textContent='送信する ›';alert('送信に失敗しました。お電話（082-222-6671）にてご連絡ください。');}
-    })
-    .catch(()=>{btn.disabled=false;btn.textContent='送信する ›';alert('通信エラーが発生しました。お電話（082-222-6671）にてご連絡ください。');});
-});
 </script>
+<script src="script.js"></script>
 </body></html>
