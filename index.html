@@ -72,6 +72,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="field"><label>メールアドレス <span class="req">必須</span></label><input name="email" type="email" required placeholder="example@mail.com"></div>
       <div class="field"><label>ご連絡可能な時間帯 <span class="req">必須</span></label><select name="contact_time" required><option value="">選択してください</option><option>10〜12時</option><option>12〜13時</option><option>13〜15時</option><option>15〜17時</option><option>17〜19時</option><option>いつでもOK</option></select></div>
       <div id="date-fields"></div>
+      <div class="field">
+        <label>当院にご来院されたことはありますか？</label>
+        <div style="display:flex;gap:24px;margin-top:4px;">
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:16px;"><input type="radio" name="visited" value="はい"> はい</label>
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:16px;"><input type="radio" name="visited" value="いいえ"> いいえ</label>
+        </div>
+      </div>
       <div class="field"><label>備考</label><textarea name="message" rows="5" placeholder="気になることやご質問があればご記入ください。"></textarea></div>
       <label class="field privacy"><input type="checkbox" name="privacy" required>プライバシーポリシーに同意する</label>
       <button class="submit" type="submit">送信する ›</button>
